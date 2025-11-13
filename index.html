@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy - allows all HTTPS/HTTP connections for API access -->
+    <!-- Note: If your server sets CSP headers, they will override this meta tag -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval' data: blob:; style-src * 'unsafe-inline' data: blob:; font-src * data: blob:; connect-src * data: blob:; img-src * data: blob:; frame-src * data: blob:;">
+    <title>Space Operations Alpha Assistant Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+</head>
+<body>
+    <div id="dashboard">
+        <!-- Top Row -->
+        <div class="row top-row">
+            <!-- Top Left: Weather Panel -->
+            <div class="panel weather-panel" id="weather-panel">
+                <div class="panel-header">
+                    <span>Local Weather</span>
+                </div>
+                <div class="panel-content" id="weather-content">
+                    <div id="weather-message">Loading weather data...</div>
+                </div>
+                <div class="power-bar-section" id="power-bar-section">
+                    <div class="power-status" id="power-status">Power Feed -</div>
+                    <div class="power-bar" id="power-bar">[                    ]</div>
+                    <div class="power-output" id="power-output">Output:   0%</div>
+                </div>
+            </div>
+
+            <!-- Top Center: Inner System Chart -->
+            <div class="panel chart-panel" id="inner-chart-panel">
+                <div class="panel-header" id="inner-chart-header">
+                    <span>Solar System (top-down) - Waiting for first update...</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="inner-chart-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Top Right: Inner System Telemetry -->
+            <div class="panel telemetry-panel" id="inner-telemetry-panel">
+                <div class="panel-header">
+                    <span>Inner System Telemetry</span>
+                </div>
+                <div class="panel-content" id="inner-telemetry-content">
+                    <div class="telemetry-message">Loading telemetry...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="row bottom-row">
+            <!-- Bottom Left: News Feed -->
+            <div class="panel news-panel" id="news-panel">
+                <div class="panel-header">
+                    <span>Live News Feeds (Breaking News)</span>
+                </div>
+                <div class="panel-content" id="news-content">
+                    <div class="news-message">Awaiting latest headlines...</div>
+                </div>
+            </div>
+
+            <!-- Bottom Center: Outer System Chart -->
+            <div class="panel chart-panel" id="outer-chart-panel">
+                <div class="panel-header">
+                    <span>Outer System (top-down) - Gas & ice giants perspective</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="outer-chart-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Bottom Right: Outer System Telemetry -->
+            <div class="panel telemetry-panel" id="outer-telemetry-panel">
+                <div class="panel-header">
+                    <span>Outer System Telemetry</span>
+                </div>
+                <div class="panel-content" id="outer-telemetry-content">
+                    <div class="telemetry-message">Loading telemetry...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
+
