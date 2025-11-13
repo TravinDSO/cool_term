@@ -182,5 +182,5 @@ Part of the Alpha Assistant project.
 <a href="https://www.buymeacoffee.com/travin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 I'm making use of https://github.com/Swordfish90/cool-retro-term on my workstation to give it a retro look.
- 
-![Retro Screenshot](assets\with_cool_retro_term.png)
+
+![Retro Screenshot](assets/with_cool_retro_term.png)
